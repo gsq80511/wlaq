@@ -19,7 +19,7 @@ public class server {
 	SUI window = new SUI();
 	public List<serverone> clients = new ArrayList<serverone>(); // 保存客户端线程类
 
-	public server() {
+	public server() {/////////////
 
 		ServerSocket s = null;
 		Socket socket = null;
