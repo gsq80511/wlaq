@@ -34,7 +34,7 @@ public class client {
 		// window.txtMsg.append("vicvuewf");
 		window.frame.setVisible(true);//
 		try {
-			// 客户端socket指定服务器的地址和端口号
+			// 客户端socket指定服务器的地址和端口号//
 			socket = new Socket(IP, port);
 			System.out.println("Socket=" + socket);//
 
