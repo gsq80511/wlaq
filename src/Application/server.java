@@ -103,8 +103,8 @@ public class server {
 						pw.close();
 						socket.close();
 
-					}
-					if (str2.equals("进入聊天室")) {///
+					}////
+					if (str2.equals("进入聊天室")) {/////
 						window.txtMsg1.append(str + "（Kerberos认证通过）\n");
 						System.out.println(str2);
 
