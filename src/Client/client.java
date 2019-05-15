@@ -36,7 +36,7 @@ public class client {
 		try {
 			// 客户端socket指定服务器的地址和端口号
 			socket = new Socket(IP, port);
-			System.out.println("Socket=" + socket);////////
+			System.out.println("Socket=" + socket);//
 
 			/* 建立一个客户端UI */
 
