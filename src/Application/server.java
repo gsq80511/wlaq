@@ -15,7 +15,7 @@ import java.util.List;
 
 public class server {
 
-	public static int PORT = 7777;
+	public static int PORT = 7777;//
 	SUI window = new SUI();
 	public List<serverone> clients = new ArrayList<serverone>(); // 保存客户端线程类
 
