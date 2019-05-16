@@ -15,9 +15,9 @@ import java.util.List;
 
 public class server {
 
-	public static int PORT = 7777;//
+	public static int PORT = 7777;//gs
 	SUI window = new SUI();
-	public List<serverone> clients = new ArrayList<serverone>(); // ±£´æ¿Í»§¶ËÏß³ÌÀà
+	public List<serverone> clients = new ArrayList<serverone>(); // ï¿½ï¿½ï¿½ï¿½Í»ï¿½ï¿½ï¿½ï¿½ß³ï¿½ï¿½ï¿½
 
 	public server() {/////////////
 
@@ -28,15 +28,15 @@ public class server {
 
 			window.frame.setVisible(true);
 
-			// µÈ´ıĞÂÇëÇó¡¢·ñÔòÒ»Ö±×èÈû
+			// ï¿½È´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ó¡¢·ï¿½ï¿½ï¿½Ò»Ö±ï¿½ï¿½ï¿½ï¿½
 			while (true) {
 				socket = s.accept();
 
 				// System.out.println("socket:"+socket);
 				// window.txtMsg1.append(socket+"\n");
 				serverone c = new serverone(socket);
-				// new Thread(c).start(); //Æô¶¯Ïß³Ì
-				clients.add(c); // Ìí¼ÓÏß³ÌÀà
+				// new Thread(c).start(); //ï¿½ï¿½ï¿½ï¿½ï¿½ß³ï¿½
+				clients.add(c); // ï¿½ï¿½ï¿½ï¿½ß³ï¿½ï¿½ï¿½
 			}
 		} catch (Exception e) {
 			try {
@@ -77,7 +77,7 @@ public class server {
 		void sendall(String str) {
 			try {
 
-				pw.println(str);// ½«ÏûÏ¢Êä³ö¸ø¿Í»§¶Ë
+				pw.println(str);// ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í»ï¿½ï¿½ï¿½
 				// window.txtMsg1.append(str+"\n");
 				pw.flush();
 
@@ -92,11 +92,11 @@ public class server {
 				try {
 					str = br.readLine();
 					str2 = str.substring(6);
-					for (serverone e : clients) {// ±éÀúÊä³ö
+					for (serverone e : clients) {// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 						// window.txtMsg1.append(str+"\n");
 						e.sendall(str + "\n");
 					}
-					if (str2.equals("ÍË³öÁÄÌìÊÒ")) {
+					if (str2.equals("ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")) {
 						window.txtMsg1.append(str + "\n");
 						System.out.println(str2);
 						br.close();
@@ -104,8 +104,8 @@ public class server {
 						socket.close();
 
 					}////
-					if (str2.equals("½øÈëÁÄÌìÊÒ")) {/////
-						window.txtMsg1.append(str + "£¨KerberosÈÏÖ¤Í¨¹ı£©\n");
+					if (str2.equals("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")) {/////
+						window.txtMsg1.append(str + "ï¿½ï¿½Kerberosï¿½ï¿½Ö¤Í¨ï¿½ï¿½ï¿½ï¿½\n");
 						System.out.println(str2);
 
 					}
